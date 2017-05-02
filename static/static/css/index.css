@@ -1,0 +1,217 @@
+body {
+    margin: 0px 10px;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+}
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+#calendar {
+    width: 100%;
+    margin: 0 auto;
+}
+.title-select {
+	position: relative;
+}
+.select-box {
+	width: 300px;
+	height: 20px;
+	border-radius: 4px;
+	padding-left: 15px;
+	padding-right: 30px;
+	font-size: 14px;
+	border: 1px solid #ededed;
+}
+.product-select i {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	left: -20px;
+}
+.product-title {
+    height: 60px;
+    line-height: 60px;
+    text-align: center; 
+    background-color: #ff9999;
+    font-size: 20px;
+    color: #fff;
+}
+.product-select {
+	position: absolute;
+	right: 5px;
+	top: 0;
+	height: 60px;
+	line-height: 60px;
+}
+.total-block {
+    width: 20%;
+    float: left;    
+}
+.fc-view {
+    width: 80%;
+    float: left;   
+}
+.fc-toolbar.fc-header-toolbar {
+    background-color: #ededed;
+    margin-bottom:0;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+.fc-center,.fc-left,.fc-right {
+ 	position: relative;
+	width: 250px;
+}
+.fc-center h2 {
+	color: #383838;
+ 	font-weight: 200;
+ 	font-size: 16px;
+}
+.fc-prev-button.fc-button.fc-state-default {
+	position: absolute;
+	left: 0;
+	top: 10.6px;
+	background: #ededed;
+	border: none;
+	box-shadow: none;
+}
+.fc-next-button.fc-button.fc-state-default,.fc-prev-button.fc-button.fc-state-default span {
+	color: #8b8b8b;
+}
+.fc-next-button.fc-button.fc-state-default {
+	position: absolute;
+	right: 0;
+	top: 10.6px;
+	background: #ededed;
+	border: none;
+	box-shadow: none;
+}
+.fc .fc-toolbar>*>* {
+	float: none;
+}
+.year-select {
+	position: absolute;
+	top: 0;
+	left: 10px;
+}
+.year-select  .select-text {
+	font-size: 16px;
+	color: #383838;	
+}
+.select-year {
+	width:70px;
+	text-align: center;
+	font-size: 16px;
+	color: #383838;
+	height:22px;
+	line-height: 22px;
+	box-shadow: 0.5px 0.5px 1px #383838 inset;
+}
+
+/*left*/
+.pro-select {
+	padding: 40px 0 50px 20px;
+}
+.pro-icon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.product-sale {
+	margin-bottom: 20px;
+}
+.product-sale .pro-icon {
+	background-color: #99ccff;
+}
+.product-limit .pro-icon {
+	background-color: #ffcc99;	
+}
+.pro-text {
+	margin-left: 15px;
+	font-size: 18px;
+	color: #383838;
+	vertical-align: middle;
+}
+.total-month {
+	padding-left: 20px;
+	font-size: 16px;
+	color: #383838;
+}
+.sale-total,.due-total {
+	margin-bottom: 30px;
+}
+.sale-total div{
+	min-height: 20px;
+}
+.due-total div{
+	min-height: 20px;	
+}
+.num-total div {
+	min-height: 20px;	
+}
+.text-info {
+	margin-bottom: 10px;
+}
+
+/* messagebox */
+.suspension-box {
+	padding: 5px;
+	width: 374px;
+	height: 270px;
+	background: #fff;
+	position: fixed;
+	left: 50%;
+	margin-left: -187px;
+	top: 50%;
+	margin-top: -140px;
+	z-index: 10000;
+	border: 2px solid #99ccff;
+	border-radius: 8px;
+}
+.box-area {
+	padding: 10px;
+	line-height: 22px;
+	height: 200px;
+}
+.divider-line {
+	width: 100%;
+	border: 1px solid #ddd;
+	margin: 10px 0;
+}
+.pro-info-area {
+	margin-top: 20px;
+	overflow: hidden;
+}
+.pro-info-area div {
+	width: 50%;
+	float: left;
+}
+.select-pro {
+	text-align:center;
+	color: #999;
+}
+.select-pro span {
+	vertical-align: middle;
+	text-align: justify;
+}
+.arrow-icon a {
+	display: inline-block;
+	width: 20px;
+	text-decoration: none;
+	color: #999;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.fc-day-grid-event {
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+.fc td.fc-day.fc-today{
+	background-color: rgba(255, 255, 204, 0.3);
+}

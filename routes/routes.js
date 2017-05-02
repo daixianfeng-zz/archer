@@ -1,13 +1,12 @@
 var router = require('koa-router')();
-const userController = require('./controller-user');
 const indexController = require('./controller-index');
-const listController = require('./controller-list');
-const detailController = require('./controller-detail');
+const productController = require('./api/product.js');
 
 router
     .get('/', indexController)
-    .get('/list', listController)
-    .get('/user', userController)
-    .get('/detail/:id', detailController);
-    
+    .get('/index', indexController)
+    .get('/api/getSummaryByMonth.json', productController.getProductsSummary)
+    .get('/api/getProductsByMonth.json', productController.getProductsByMonth)
+    .get('/api/getProductByName.json', productController.getProductByName);
+
 module.exports = router;

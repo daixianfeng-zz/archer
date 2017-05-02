@@ -1,27 +1,48 @@
 const request = require('request');
+const productInterface = require('./interface/product');
 
 const productModel = {
-    getProductList: (ctx) => {
-        return new Promise(function(resolve, reject){
-            let listOption = {
-                url: '/product/products.json',
-                headers: Object.assign(ctx.request.header,{from: 'nodejs'})
+    getProductsSummary: async (ctx, conditions) => {
+        try{
+            var info = await Promise.all([productInterface.getSummaryByMonth(ctx, conditions)]);
+            return Object.assign({error: 0}, JSON.parse(info[0]));
+        }catch(e){
+            ctx.errorLog.error('Get products error:'+"\n"+e.stack);
+            ctx.throw('Request Error', 500);
+        }
+    },
+    getProductsByMonth: async (ctx, conditions) => {
+        try{
+            let startForms = {
+                startRaiseMonth: conditions.month
             };
-            request(listOption, function(err, response, body){
-                if(err){
-                    reject(err); 
-                }
-                try{
-                    var productList = JSON.parse(body);
-                    resolve(productList);
-                }catch(e){
-                    reject(e);
-                }
-            });
-        });
+            let endForms = {
+                productEndMonth: conditions.month
+            };
+            var info = await Promise.all([productInterface.getProductsStartByTime(ctx, startForms), productInterface.getProductsEndByTime(ctx, endForms)]);
+            return {
+                error: 0,
+                startProducts: JSON.parse(info[0]),
+                endProducts: JSON.parse(info[1])
+            };
+        }catch(e){
+            ctx.errorLog.error('Get products error:'+"\n"+e.stack);
+            ctx.throw('Request Error', 500);
+        }
+    },
+    getProductByName: async (ctx, conditions) => {
+        try{
+            var info = await Promise.all([productInterface.getProductsByName(ctx, conditions)]);
+            let result = JSON.parse(info[0])[0] || null;
+            return {
+                error: 0,
+                product: result
+            };
+        }catch(e){
+            ctx.errorLog.error('Get products error:'+"\n"+e.stack);
+            ctx.throw('Request Error', 500);
+        }
     }
 };
 
-
-    
 module.exports = productModel;

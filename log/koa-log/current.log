@@ -1,0 +1,3 @@
+[2016-12-19 15:55:48.682] [DEBUG] visit - Start: 2016-12-19 15:55:48(680) ::ffff:127.0.0.1 -- GET / HTTP/1.1, null Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+[2016-12-19 15:55:49.134] [DEBUG] visit - End: 2016-12-19 15:55:49(134) ::ffff:127.0.0.1 -- GET / HTTP/1.1, null Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+[2016-12-19 15:55:49.135] [INFO] visit - Response time(ms): 454

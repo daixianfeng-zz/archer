@@ -1,7 +1,7 @@
 {
   "name": "archer",
   "version": "0.1.0",
-  "description": "koa2 test",
+  "description": "demo for koa2",
   "main": "app.js",
   "dependencies": {
     "co": "^4.6.0",
@@ -10,9 +10,12 @@
     "koa-bodyparser": "^2.3.0",
     "koa-convert": "^1.2.0",
     "koa-error": "^2.1.0",
-    "koa-errorhandler": "^0.1.1",
     "koa-router": "^7.0.1",
+    "koa-static": "^3.0.0",
     "koa-views": "^5.2.0",
+    "log4js": "^1.0.1",
+    "moment": "^2.17.1",
+    "pug": "^2.0.0-beta6",
     "request": "^2.79.0"
   },
   "devDependencies": {},

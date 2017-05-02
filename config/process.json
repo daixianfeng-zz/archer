@@ -1,0 +1,17 @@
+{
+  "apps" : [{
+    "name": "calender",
+    "script": "./app.js",
+    "cwd": "/Users/work/projects/calendar",
+    "error_file": "./log/ps-error/current.log",
+    "out_file": "./log/ps-log/current.log",
+    "watch": true,
+    "node_args": "--harmony-async-await",
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production": {
+       "NODE_ENV": "production"
+    }
+  }]
+}

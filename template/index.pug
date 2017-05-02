@@ -1,0 +1,73 @@
+extends layout
+
+block mainHead
+     title 产品日历
+     link(type='text/css', rel='stylesheet', href='/static/lib/fullcalendar/fullcalendar.min.css')
+     link(type='text/css', rel='stylesheet', href='/static/lib/font-awesome/css/font-awesome.min.css')
+     link(type='text/css', rel='stylesheet', href='/static/css/index.css')
+     script(src='/static/lib/moment/moment.min.js')
+     script(src='/static/lib/jquery/jquery.min.js')
+     script(type='text/javascript', charset='utf-8', src='/static/lib/fullcalendar/fullcalendar.min.js')
+     script(type='text/javascript', charset='utf-8', src='/static/js/index.js')
+
+block mainBody
+    .container
+        .title-select
+            .product-title 产品日历
+            .product-select
+                input#select-box.select-box(type='text', required='', maxlength='20', name='select-area', placeholder='输入产品名称或编号可搜索')
+                i.icon-search.icon-circle-arrow-right
+        #calendar
+    .suspension-box(style='display:none')
+        .box-area
+            div
+                span 产品名称：
+                span.pro-name
+            div
+                span 发行方：
+                span.pro-seller
+            .pro-info-area
+                div
+                    span 收益率：
+                    span.interest-rate
+                div
+                    span 发售日：
+                    span.start-date
+                div
+                    span 规模：
+                    span.total-sum
+                div
+                    span 募满日：
+                    span.full-raise-date
+                div
+                    span 期限：
+                    span.duration
+                div
+                    span 停售日：
+                    span.end-date
+                div
+                    span 投资人数：
+                    span.user-num
+                div
+                    span 起息日：
+                    span.interest-start
+                div
+                    span 预热日：
+                    span.pre-sale
+                div
+                    span 到期日：
+                    span.interest-end
+        p.divider-line
+        .select-pro
+            span.arrow-icon
+                a.arrow-left(href='javascript:void(0)')
+                    i.icon-angle-left
+            span.current-page 1
+            span /
+            span.total-page
+            span.arrow-icon
+                a.arrow-right(href='javascript:void(0)')
+                    i.icon-angle-right
+
+block mainFoot
+
